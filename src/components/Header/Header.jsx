@@ -14,10 +14,10 @@ import ShoppingCart from "@material-ui/icons/ShoppingCart";
 import { showCart } from "./Header.actions";
 
 const Header = () => {
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
 
   const handleOnClick = () => {
-    dispatch(showCart());
+    //dispatch(showCart());
   };
 
   return (
