@@ -5,7 +5,7 @@ import Home from "./Pages/Home/Home";
 
 const Main = () => {
   return (
-    <Container maxWidth="sm">
+    <Container maxWidth="lg">
       <Box component="main" my={4}>
         <Switch>
           <Route path="/" exact component={Home} />

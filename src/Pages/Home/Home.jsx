@@ -1,30 +1,11 @@
 import React from "react";
-import {
-  Typography,
-  Box,
-  Grid,
-  GridList,
-  GridListTile,
-} from "@material-ui/core";
+import { Box } from "@material-ui/core";
+import ProductsGrid from "../../components/ProductsGrid/ProductsGrid.controller";
 
 const Home = () => {
   return (
     <Box>
-      <Typography variant="h1" align="center">
-        Home Page
-      </Typography>
-      <GridList cellHeight={160} cols={3}>
-        <GridListTile cols={1}>
-          <Typography variant="body1" align="center">
-            Home Page
-          </Typography>
-        </GridListTile>
-        <GridListTile cols={1}>Item 2</GridListTile>
-        <GridListTile cols={1}>Item 3</GridListTile>
-        <GridListTile cols={1}>Item 4</GridListTile>
-        <GridListTile cols={1}>Item 5</GridListTile>
-        <GridListTile cols={1}>Item 6</GridListTile>
-      </GridList>
+      <ProductsGrid />
     </Box>
   );
 };
