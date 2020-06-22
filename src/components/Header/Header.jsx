@@ -1,31 +1,11 @@
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Typography,
-  Button,
-  Grid,
-  Badge,
-} from "@material-ui/core";
-import { useDispatch, connect } from "react-redux";
-
-import ShoppingCart from "@material-ui/icons/ShoppingCart";
-import { showCart } from "./Header.actions";
+import { AppBar, Toolbar, Typography, Grid } from "@material-ui/core";
+import Cart from "../Cart/Cart.controller";
 
 const Header = () => {
-  //const dispatch = useDispatch();
-
-  const handleOnClick = () => {
-    //dispatch(showCart());
-  };
-
   return (
     <AppBar position="static">
       <Toolbar>
-        {/* <IconButton edge="start" color="inherit" aria-label="menu">
-          <MenuIcon />
-        </IconButton> */}
         <Grid
           container
           direction="row"
@@ -38,11 +18,7 @@ const Header = () => {
             </Typography>
           </Grid>
           <Grid item spacing={2}>
-            <Button color="inherit" onClick={handleOnClick}>
-              <Badge badgeContent={0} color="secondary">
-                <ShoppingCart />
-              </Badge>
-            </Button>
+            <Cart />
           </Grid>
         </Grid>
       </Toolbar>
