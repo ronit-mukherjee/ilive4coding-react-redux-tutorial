@@ -47,11 +47,11 @@ const Cart = ({
           {products.map((product) => (
             <MenuItem key={product.id}>
               <ListItemAvatar>
-                <Avatar variant="rounded" src={product.imageUrl} />
+                <Avatar variant="rounded" src={"https://" + product.imageUrl} />
               </ListItemAvatar>
               <ListItemText
                 primary={product.name}
-                secondary={"₹" + product.price}
+                secondary={product.price.current.text}
               />
               <ListItemSecondaryAction>
                 <IconButton

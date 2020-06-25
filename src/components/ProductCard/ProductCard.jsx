@@ -17,7 +17,7 @@ export default function ProductCard({
       <CardContent>
         <Image
           alt={product.name}
-          src={product.imageUrl}
+          src={"https://" + product.imageUrl}
           title={product.name}
           style={{ padding: 0, height: 200, textAlign: "center" }}
           imageStyle={{ width: 200, position: "static" }}
@@ -27,7 +27,7 @@ export default function ProductCard({
           {product.name}
         </Typography>
         <Typography style={{ fontWeight: 500 }} color="secondary" component="p">
-          ₹{product.price}
+          {product.price.current.text}
         </Typography>
       </CardContent>
       <CardActions>

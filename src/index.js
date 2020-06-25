@@ -6,8 +6,6 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import App from "./App";
 import theme from "./theme";
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
-//import store from "./store";
 
 ReactDOM.render(
   <React.StrictMode>

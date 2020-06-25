@@ -14,7 +14,7 @@ const Header = () => {
         >
           <Grid item spacing={10}>
             <Typography variant="h6" component="h1">
-              Toy Mart
+              Footwear Mart
             </Typography>
           </Grid>
           <Grid item spacing={2}>
