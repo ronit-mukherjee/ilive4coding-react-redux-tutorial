@@ -26,4 +26,9 @@ export const setProducts = (products = null) => {
       payload: products,
     };
   }
+
+  return {
+    type: SET_PRODUCTS,
+    payload: [],
+  };
 };
