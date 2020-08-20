@@ -1,22 +1,15 @@
-import { SET_PRODUCTS } from "../types/products.types";
+import { SET_PRODUCTS, FETCH_PRODUCTS } from "../types/products.types";
+//import productsService from "../services/products.service";
 
 export const fetchProducts = () => {
-  return async function (dispatch) {
-    const res = await fetch(
-      "https://asos2.p.rapidapi.com/products/v2/list?country=US&currency=USD&sort=freshness&lang=en-US&sizeSchema=US&offset=0&categoryId=4209&limit=48&store=US",
-      {
-        method: "GET",
-        headers: {
-          "x-rapidapi-host": "asos2.p.rapidapi.com",
-          "x-rapidapi-key":
-            "1949ed3468msh573f2b5adccd778p14beffjsn12e69f0cac40",
-        },
-      }
-    );
-    const data = await res.json();
+  //Done for REDUX_THUNK
+  /* return async function (dispatch) {
+    const products = await productsService.getAllProducts();
+    dispatch(setProducts(products));
+  }; */
 
-    dispatch(setProducts(data.products));
-  };
+  //Done for REDUX_SAGA
+  return { type: FETCH_PRODUCTS };
 };
 
 export const setProducts = (products = null) => {

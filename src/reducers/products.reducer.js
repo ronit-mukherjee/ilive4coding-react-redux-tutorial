@@ -1,4 +1,3 @@
-import Product from "../models/Product";
 import { SET_PRODUCTS } from "../types/products.types";
 
 export const productsInitialState = [];
